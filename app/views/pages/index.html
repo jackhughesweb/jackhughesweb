@@ -1,0 +1,38 @@
+<div id="home" class="home">
+  <section class="header">
+    <article>
+      <%= image_tag "pic.jpg", alt: "A picture of me", class: "logo" %>
+      <h1>Jack Hughes</h1>
+      <h2>Student. Web developer and designer. Blogger.</h2>
+    </article>
+  </section>
+  <section class="blog">
+    <article>
+      <h2>Blog posts</h2>
+      <ul>
+        <% @posts.each do |post| %>
+          <li><%= link_to post.title, post %></li>
+        <% end %>
+      </ul>
+      <a href="#">RSS</a>
+    </article>
+  </section>
+  <section class="projects">
+    <article>
+      <h2>Projects</h2>
+      <ul>
+        <!-- <li><a href="#"><img src="/img/work/penpencilruler-hero.png" alt="PenPencilRuler" class="project-hero"></a></li> -->
+        <% @projects.each do |project| %>
+          <li><%= link_to project.title, project %></li>
+        <% end %>
+      </ul>
+    </article>
+  </section>
+  <section class="contact">
+    <article>
+      <h2>Contact me</h2>
+      <p>Tweet me <a href="http://twitter.com/jackhughesweb">@jackhughesweb</a></p>
+      <p>Email me at <a href="mailto:jack@jackhughesweb.com">jack@jackhughesweb.com</a> (<a href="https://gist.github.com/jackhughesweb/9534787">PGP key</a>)</p>
+    </article>
+  </section>
+</div>  
