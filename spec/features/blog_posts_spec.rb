@@ -12,8 +12,7 @@ describe "BlogPosts" do
   end
   it "allows user to create a post" do
     post = FactoryGirl.create(:post)
-    visit posts_path
-    click_link "New Post"
+    visit new_post_path
     fill_in "Title", :with => post.title
     fill_in "Subtitle", :with => post.subtitle
     fill_in "Body", :with => post.body
