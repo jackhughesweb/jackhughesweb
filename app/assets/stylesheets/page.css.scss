@@ -79,6 +79,19 @@ div.home {
     background-color: #bfdef1;
   }
 
+  section.blog a.blog-more {
+    color: #000000;
+    background-color: #bfdef1;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+    display: block;
+    &:hover {
+      background-color: #81bde3;
+    }
+  }
+
   section.projects * {
     color: #ffffff;
   }

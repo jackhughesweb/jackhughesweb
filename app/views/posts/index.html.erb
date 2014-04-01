@@ -1,37 +1,19 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Body</th>
-      <th>Publish date</th>
-      <th>Published</th>
-      <th>Slug</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.subtitle %></td>
-        <td><%= post.body %></td>
-        <td><%= post.publish_date %></td>
-        <td><%= post.published %></td>
-        <td><%= post.slug %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<div id="blog-list" class="blog-list">
+  <a href="<%= root_path %>">
+    <section class="header">
+      <article>
+        <h1><span class="darker">Jack Hughes/</span>Blog Posts</h1>
+      </article>
+    </section>
+  </a>
+  <section class="blog">
+    <article>
+      <h2>Blog posts</h2>
+      <ul>
+        <% @posts.each do |post| %>
+          <li><%= link_to post.title, post %></li>
+        <% end %>
+      </ul>
+    </article>
+  </section>
+</div>

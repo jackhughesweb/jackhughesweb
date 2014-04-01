@@ -1,0 +1,71 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.blog-list {
+
+  section > * {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  
+  section.header {
+    background-color: #2980b9;
+    a, a * {
+      text-decoration: none;
+    }
+    span.darker{
+      color: #bfdef1;
+    }
+    a:hover * {
+      color: #bfdef1;
+    }
+    a:hover span.darker {
+      color: #81bde3;
+    }
+  }
+
+  section.blog {
+    background-color: #439cd5;
+  }
+
+  section.header * {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  section.blog * {
+    color: #ffffff;
+  }
+
+  section.blog ul {
+    list-style-type: none;
+  }
+
+  section.blog ul li {
+    color: #000000;
+    background-color: #ffffff;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  section.blog ul li a {
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+    display: block;
+  }
+
+  section.blog ul li a:hover {
+    background-color: #bfdef1;
+  }
+
+}

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.where(published: true).order("publish_date DESC").limit(3)
   end
 
   # GET /posts/1
